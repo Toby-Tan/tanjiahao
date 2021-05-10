@@ -1,5 +1,5 @@
 [[source]]
-url = "https://mirrors.aliyun.com/pypi/simple"
+url = "https://pypi.doubanio.com/simple"
 verify_ssl = true
 name = "pypi"
 
@@ -12,7 +12,8 @@ flask = "*"
 gevent = "*"
 selenium = "*"
 
+
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.7"
