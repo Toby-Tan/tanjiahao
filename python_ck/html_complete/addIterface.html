@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加接口</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <style type="text/css">
+
+        .box {
+            height: 700px;
+            width: 100%;
+            /*background: #9297a2;*/
+        }
+
+        .menu {
+            height: 100px;
+            width: 100%;
+            background: #ffff;
+        }
+
+        .menu .cur {
+            background: #00cccc;
+        }
+
+        .menu li {
+            float: left;
+            width: 200px;
+            height: 100px;
+            font: normal 16px/100px "Microsoft YaHei UI";
+            text-align: center;
+
+        }
+
+        .menu li:hover {
+            background: #9ad2ed;
+        }
+
+        .content div {
+            height: 600px;
+            width: 100%;
+            background: #e9ecf1;
+            display: none;
+        }
+
+        /*疑问：为什么要加上.content*/
+        .content .active {
+            display: block;
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            // 选项卡
+            $('.menu li').click(function () {
+                $(this).addClass('cur').siblings().removeClass('cur')
+                $('.content div').eq($(this).index()).addClass('active').siblings().removeClass('active')
+            })
+            // 添加参数行
+            $('.add_data').click(function () {
+                var tr = '<tr>' + $(this).siblings('table').find('tr').eq(-1).html() + '</tr>'
+                // console.log(tr)
+                $(this).siblings('table').append(tr)
+
+            })
+            // 删除v1.0
+            // $('.del_data').click(function () {
+            //     var len = $(this).siblings('table').find('tr').length
+            //     if (len > 2) {
+            //         $(this).siblings('table').find('tr').eq(-1).remove()
+            //     }
+            // })
+
+            // 删除修复v1.1
+            //     $('.del_data').click(function () {
+            //         var check = $(':checked');
+            //         var table = $(this).siblings('table');
+            //         if (table.find('tr').length > 2) {
+            //             if (check.length > 0) {
+            //                 // ":checked"匹配所有选中的被选中元素(复选框、单选框等，不包括select中的option)
+            //                 check.parent().parent().remove();
+            //             } else {
+            //                 table.find('tr').eq(-1).remove();
+            //             }
+            //         }
+            //     })
+            // })
+
+            // 删除修复v1.2
+            $('.del_data').click(function () {
+                // ":checked"匹配所有选中的被选中元素(复选框、单选框等，不包括select中的option)
+                var check = $(':checked');
+                var table = $(this).siblings('table');
+                // tr>2行才能删
+                if (table.find('tr').length > 2) {
+                    // 选中的行数等于表格行数-1，循环删除(选中行数-1)行
+                    // 修复表格最后一行也被删除的bug
+                    if (check.length === table.find('tr').length - 1) {
+                        for (var i = 0; i < check.length-1; i++) {
+                            table.find('tr').eq(-1).remove();
+                        }
+                        // 选中的行数>0，删除选中行
+                    } else if (check.length > 0) {
+                        check.parent().parent().remove();
+                        // 没有选中的行，删除最后一行
+                    } else {
+                        table.find('tr').eq(-1).remove();
+                    }
+                }
+            })
+        })
+
+
+    </script>
+
+</head>
+<body>
+
+<div class="box">
+
+    <div class="menu">
+        <ul>
+            <li class="cur">请求头</li>
+            <li>请求数据</li>
+            <li>响应数据</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="active">
+            <input type="button" class="add_data" value="添加">
+            <input type="button" class="del_data" value="删除">
+            <table>
+                <tr>
+                    <th>选择</th>
+                    <th>key</th>
+                    <th>value</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <input type="button" class="add_data" value="添加">
+            <input type="button" class="del_data" value="删除">
+            <table>
+                <tr>
+                    <th>选择</th>
+                    <th>key</th>
+                    <th>value</th>
+                    <th>description</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>响应参数</div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

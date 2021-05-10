@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+    <!--    <style type="text/css">-->
+    <!--        #username{-->
+    <!--            height: 30px;-->
+    <!--            background: #9ad2ed;-->
+    <!--        }-->
+    <!--    </style>-->
+    <script type="text/javascript" src="../js/index_main.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var box = document.getElementById('username');
+            box.style.height = '200px';
+            box.style.background = '#000000';
+
+            var box1 = document.getElementsByTagName('li');
+            for (i in box1) {
+                if (i < box1.length) {
+                    if (i % 2 === 0) {
+                        box1[i].style.background = '#8087ee'
+                    }
+                }
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+<div id="username"></div>
+
+<div class="box1">
+    <ur>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ur>
+</div>
+</body>
+</html>

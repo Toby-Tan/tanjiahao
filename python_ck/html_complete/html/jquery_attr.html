@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attr属性</title>
+    <style type="text/css">
+        .div1 {
+            width: 100%;
+            height: 400px;
+            background: #9ad2ed;
+        }
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 读取属性
+            // var href = $('.div1 a').eq(0).attr('href');
+            // console.log(href)
+            // 属性赋值
+            // $('li a').attr('href', href);
+            // 移除属性
+            // $('ul a').eq(2).removeAttr('href');
+            // 获取text()文本
+            // console.log($('.div1').text());
+            // 获取html()文本
+            // console.log($('ul').html());
+            //获取元素的value值 val()
+            //     $(function (){
+            //         $('#tj').click(function (){
+            //             var user = $('#user').val()
+            //             var pwd = $('#pwd').val()
+            //             if (user.length<8){
+            //                 alert('输入的账号不能小于8位')
+            //             }else {
+            //                 alert(pwd)
+            //             }
+            //         })
+            //     })
+
+            //     元素末尾添加html内容
+            // $('.div1').append('<p1>append添加</p1>');
+            //     元素开头添加html内容
+            // $('.div1').prepend('<p1>prepend添加</p1><br>');
+            // 元素外前面添加内容
+            // $('.div1').before('<p1>before</p1>');
+            // 元素外后面添加内容
+            // $('.div1').after('<p1>after</p1>');
+            // 删除元素,包括子元素
+            // $('ul').remove();
+            // 删除指定元素的所有子元素集合
+            // $('li').empty();
+
+
+        })
+    </script>
+</head>
+<body>
+<div class="div1">
+    <span>你好python
+        <ul>
+            <li><a href="http://www.baidu.com">百度1</a></li>
+            <li><a href="">百度2</a></li>
+            <li><a href="">百度3</a></li>
+            <li><a href="">百度4</a></li>
+            <li><a href="">百度5</a></li>
+        </ul>
+    </span>
+
+</div>
+<!--<form action="">-->
+<!--    账号：<input type="text" id="user" name="user">-->
+<!--    <br>密码：<input type="password" id="pwd" name="password">-->
+<!--    <br><input type="submit" id="tj">-->
+<!--</form>-->
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+body{
+    background: #eff8f7;
+}
+
+
+.top_menu{
+    height: 100px;
+
+    /*三种方式设置背景颜色
+    1.颜色名
+    2.rgb表示，rgba可设置透明度
+    3.通常16进制数表示*/
+    /*background-color: bule;*/
+    /*background: rgba(255,122,123,0.5);*/
+    background: #03c;
+}
+/*类选择器*/
+.title{
+    width: 350px;
+    height: 100px;
+    color: #fff;
+    font: normal 32px/100px "Microsoft YaHei UI";
+    text-align: center;
+    float: left;
+}
+/*层级选择器*/
+.menu_list li{
+    height: 100px;
+    width: 150px;
+    /*background: aqua;*/
+    text-align: center;
+    font: normal 16px/100px "Microsoft YaHei UI";
+    color: #fff;
+    float: left;
+}
+.menu_list li:hover{
+    background: #00cccc;
+}
+
+.menu_list{
+    height: 100px;
+    width: 800px;
+    float: left;
+}
+
+.top_logout{
+    /*height: 100px;*/
+    font: normal 16px/40px "Microsoft YaHei UI";
+    float: right;
+    margin: 30px 50px 30px 50px;
+}
+.top_logout a{
+    color: #ffffff;
+}
+
+.left_menu{
+    /*margin: 20px 0 0 0;*/
+    position: absolute;
+    left: 0;
+    top: 120px;
+    height: 550px;
+    width: 300px;
+    /*background: bisque;*/
+    /*float: left;*/
+}
+
+.left_title{
+    height: 100px;
+    width: 100%;
+    float: left;
+    font: normal 28px/100px "Microsoft YaHei UI";
+    background: blue;
+    color: white;
+    /*缩进*/
+    text-indent: 50px;
+}
+
+.left_menu_list li{
+    height: 160px;
+    width: 300px;
+    float: left;
+    font: normal 18px/60px "Microsoft YaHei UI";
+    /*background: #d7d2d2;*/
+    /*color: black;*/
+    text-indent: 48px;
+    border-bottom: solid 1px #f1eaea;
+    background-image: url("../image/drop_arrow.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 240px;
+    background-position-y: 24px;
+}
+
+.select_list{
+
+}
+
+.select_list a{
+    float: left;
+    width: 300px;
+    height: 50px;
+    background: #fff;
+    color: #000;
+    font: normal 14px/50px "Microsoft YaHei UI";
+    text-indent: 100px;
+}
+
+.content_pro{
+    width: 1150px;
+    height: 1000px;
+    position: absolute;
+    left: 320px;
+    top: 120px;
+    background: #fff;
+    padding-left: 80px ;
+    padding-top: 40px;
+    margin-left: -20px;
+}
+
+.pro_info{
+    width: 240px;
+    height: 200px;
+    border: solid 1px #9297a2;
+    margin-right: 45px;
+    float: left;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.pro_info_add{
+    width: 240px;
+    height: 200px;
+    border: solid 1px #9297a2;
+    margin-right: 45px;
+    float: left;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.pro_info_add img{
+    margin-top: 70px;
+}
+
+.pro_title{
+    width: 100%;
+    height: 50px;
+    font: normal 22px/48px "Microsoft YaHei UI";
+    background: #9ad2ed;
+    color: #000;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pro_info p{
+    font: normal 16px/40px "Microsoft YaHei UI";
+    color: rgba(0,0,0,0.5);
+}
+
+.pro_del{
+    font: normal 18px/40px "Microsoft YaHei UI";
+    background: #0033cc;
+    width: 100px;
+    border-radius: 20px;
+    margin: 10px auto auto auto;
+}
+
+
+.top_msg{
+    /*font: normal 16px/40px "Microsoft YaHei UI";*/
+
+    float: right;
+    margin: 30px 50px 30px 50px;
+}
+
+.top_msg a img{
+    width: 35px;
+    height: 35px;
+}
+
+.top_msg a img:hover{
+    content: attr(title);
+}
+

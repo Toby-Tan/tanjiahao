@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery</title>
+
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            // 链式调用
+            $('#box2').css({background:"#d07c7c"})
+            .parent().css({background: "#bbaeae"})
+
+            //* $调用jquery
+            // jquery基本选择器
+            // class选择器: $('.box')
+            // id选择器:  $('#box')
+            // 标签选择器: $('li')
+            // 层级选择器: $('ul li span')
+            // 属性选择器: $('input[name=user]')
+            // ---------------------
+            // 示例：
+            // $('#box').css({
+            //     width: "200px",
+            //     height: "100px",
+            //     background: '#5da1af'
+            // })
+
+            // jquery基本选择器-->选择同胞和父类元素
+            // 选择div前面的第一个同级元素
+            // $('div').prev()
+            // 选择div前面所有的同级元素
+            // $('div').prevAll()
+            // 选择div后面的第一的同级元素
+            // $('div').next()
+            // 选择div后面所有的同级元素
+            // $('div').nextAll()
+            // 选择除div外的所有同级元素
+            // $('div').siblings()
+            // 选择div的所有子元素
+            // $('div').children()
+            // 选择div的父级元素
+            // $('div').parent()
+            // 选择div内的class属性等于cs的元素
+            // $('div').find('.cs')
+
+            // jquery基本选择器-->选择过滤
+            // 选择包含p元素的div元素
+            // $('div').has('p')
+            // 选择class属性不等于cs的div元素
+            // $('div').not('.cs')
+            // 选择class属性等于cs的div元素
+            // $('div').filter('.cs')
+            // 选择下标为5的div元素
+            // $('div').eq(5)
+
+        })
+    </script>
+
+</head>
+<body>
+<div id="box">box</div>
+<div id="box1">box1
+
+<div id="box2">box2</div>
+</div>
+<input type="text">
+
+<div class="btn1">
+    <url>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </url>
+</div>
+
+</body>
+</html>
