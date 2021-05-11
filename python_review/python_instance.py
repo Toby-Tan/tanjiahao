@@ -1,4 +1,4 @@
-# 单例模式
+# 单例类
 class Mytest(object):
 
     __instance = None
