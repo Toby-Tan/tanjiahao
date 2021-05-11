@@ -14,6 +14,15 @@ def index():
     get_json = request.json
     # 获取文件数据
     get_file = request.files
+    # 获取values,(form+args)
+    get_values = request.values
+    # 获取环境变量
+    get_environ = request.environ
+    # 获取content_type
+    get_content_type = request.content_type
+    # 判断是不是Josn类型数据，通过content_type
+    is_json = request.is_json
+
 
     return 'index'
 
