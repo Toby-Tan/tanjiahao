@@ -58,6 +58,6 @@ class MyCase:
     def te(self):
         print('---类方法被调用--')
 
-# MyCase()
-a = Callbackclass(MyCase)
-print(a.func)
+MyCase()
+# a = Callbackclass(MyCase)
+# print(a.func)

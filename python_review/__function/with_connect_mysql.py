@@ -33,7 +33,7 @@ class ConnectMysql():
 
 
 sql = 'SELECT * FROM api_user;'
-with ConnectMysql('localhost', 3306, 'root', 'passwrod', 'django_restful')as cursor:
+with ConnectMysql('localhost', 3306, 'root', '123456', 'django_restful')as cursor:
     cursor.execute(sql)
     # 获取所有记录列表
     res = cursor.fetchall()
