@@ -4,8 +4,10 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Pipenv (tanjiahao)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="axios" level="application" />
   </component>
   <component name="PyDocumentationSettings">
+    <option name="format" value="PLAIN" />
     <option name="myDocStringFormat" value="Plain" />
   </component>
   <component name="TemplatesService">

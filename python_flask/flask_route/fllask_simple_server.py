@@ -54,7 +54,7 @@ def log_flow(func):
 #     # 1.接受参数
 #     # 2.调用对应的函数处理数据（model层)
 #     # 3.构建响应结果
-#     f = render_template('index.html')
+#     f = render_template('index.templates')
 #     return f
 
 

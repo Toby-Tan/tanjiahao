@@ -11,7 +11,7 @@ app = Flask(
 # 定义路由，视图函数 view function
 @app.route('/')
 def index():
-    f = render_template('index_1.html')
+    f = render_template('index_1.templates')
     return f
 
 
