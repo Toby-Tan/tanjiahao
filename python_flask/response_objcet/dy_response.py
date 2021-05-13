@@ -1,11 +1,12 @@
 """
 实现一个简单的登录接口
 """
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 import pymysql
 
 
 app = Flask(__name__)
+app.config["JSON_AS_ASCII"] = False
 
 class ConMysql(object):
 
@@ -55,16 +56,18 @@ def index():
 
 @app.route('/login/', methods=['POST'])
 def login():
+    success_re = {"code":"0","msg":"success login"}
+    erro_re = {"code":"0","msg":"账号或密码错误"}
     if login_check():
-        return 'success login'
-    return '账号或密码错误'
+        return jsonify(success_re),{"content_type":"application/json"}
+    return jsonify(erro_re),{"content_type":"application/json"}
 
 
 @app.route('/user')
 def user():
     res = request.args.get('id')
     if res == '1':
-        return '1'
+        return
     return 'error123456'
 
 if __name__ == '__main__':
