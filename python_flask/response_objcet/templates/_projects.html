@@ -1,0 +1,15 @@
+{#继承基类模板#}
+{% extends 'base.html' %}
+{#引用block#}
+{% block title %}
+    {{ super() }}-
+    首页{% endblock %}
+
+{% block content %}展示所有项目
+{#include包含html块#}
+{% include 'pro_include.html' %}
+{#    宏#}
+    {% from '_macros.html' import render_field %}
+    {% set pro_list = ['pro_1','pro_2','pr_3'] %}
+    {{ render_field(pro_list) }}
+{% endblock %}

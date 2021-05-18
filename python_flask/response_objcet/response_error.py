@@ -5,6 +5,7 @@ app = Flask(__name__)
 # 全局错误处理
 @app.errorhandler(404)
 def page_not_found(error):
+    print(error)
     print('404被调用')
     return render_template('error_404.html'),404
 

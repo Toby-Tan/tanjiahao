@@ -1,0 +1,14 @@
+{% macro render_field(pro_list) %}
+    {% for i in pro_list -%}
+    {{ i }}
+    {%- endfor %}
+{% endmacro %}
+
+
+{% macro render_field1(pro_list) %}
+    {% if pro_list %}
+    {{ True }}
+    {% else %}
+    {{ False }}
+    {% endif %}
+{% endmacro %}

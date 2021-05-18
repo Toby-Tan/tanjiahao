@@ -29,7 +29,7 @@ class Myclass(object):
 
 # 类实现装饰器,既可以装饰类，也可以装饰函数，可以接收参数
 # 通过call魔术方法实现
-class Callbackclass(object):
+class Callclass(object):
 
     def __init__(self,func):
         self.func = func
@@ -40,7 +40,7 @@ class Callbackclass(object):
         print('---执行函数后功能---')
 
 # 装饰函数
-@Callbackclass
+@Callclass
 def t(a=2,b=3):
     print(a+b)
     print('__t__被调用')
@@ -48,7 +48,7 @@ def t(a=2,b=3):
 # t()
 
 # 装饰类
-@Callbackclass
+@Callclass
 class MyCase:
 
     def __init__(self,name='tanjiahao'):

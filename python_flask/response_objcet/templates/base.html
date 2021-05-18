@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试开发学习-{% block title %}默认标题{% endblock %}</title>
+</head>
+<body>
+
+<p>首页</p>
+<p>项目管理</p>
+<p>用例管理</p>
+<p>接口管理</p>
+<table>
+    <tr>
+    {% block content %}默认展示内容{% endblock %}
+</tr>
+</table>
+
+
+<p>赞助商，@tanjiahao</p>
+
+</body>
+</html>

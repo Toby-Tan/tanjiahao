@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+{#{% set msg = get_flashed_messages() %}#}
+{#{{ msg }}#}
+{% if session.get('user') %}
+    <a href="{{ url_for("index") }}">{{ session.get('user') }}登录成功</a>
+{% else %}
+    <a>请登录</a>
+{% endif %}
+{% for project in projects %}
+    {% set name = project.project_name %}
+    {% set creat_time = project.creat_time %}
+    {% set interface_num = project.interface_num %}
+    {% if not loop.last %}
+        <div>序号：{{ loop.index }}。项目：{{ name }}。
+            接口数量：{{ interface_num  }}。创建时间：{{ creat_time | s_time }}</div>
+    {% else %}
+        <div>序号：{{ loop.index }}。项目：{{ name }}。 接口数量：{{ interface_num }}。创建时间：{{ c_time(creat_time) }}</div>
+    {% endif %}
+{% endfor %}
+
+{% if test_json is isjson %}
+    {{ test_json }}
+    {% else %}
+    not is json
+{% endif %}
+{#内置管道命令#}
+{{ pm | default('为True时检测变量是否为空，为空则使用默认值',True) }}
+
+{#jinja2封装的内置全局变量，前后端都可以直接引用#}
+{{ session }}
+{#{{ g }}#}
+{#{{ request }}#}
+{#{{ config }}#}
+{#{{ url_for }}#}
+{#{{ session }}#}
+{#{{ session.get('success') }}#}
+{{ g_function() }}
+
+</body>
+</html>
